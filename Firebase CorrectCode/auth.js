@@ -19,7 +19,7 @@
  }
 
   const firebaseConfig = {
-    apiKey: "AIzaSyBs4RuqwGbJpiiWt3ntLmI1yDaHSXWvrd0",
+    apiKey: "Cannot Disclose",
     authDomain: "project-a0503.firebaseapp.com",
     projectId: "project-a0503",
     storageBucket: "project-a0503.firebasestorage.app",
