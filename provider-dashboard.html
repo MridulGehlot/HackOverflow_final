@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Provider Dashboard - LocalServe</title>
+    <link rel="stylesheet" href="provider-dashboard.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">LocalServe</div>
+        <ul>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#appointments">Appointments</a></li>
+            <li><a href="#payments">Payments</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+        </ul>
+        <button id="logoutBtn">Logout</button>
+    </nav>
+
+    <main>
+        <section id="profile">
+            <h2>Profile</h2>
+            <form id="profileForm">
+                <label for="businessName">Business Name:</label>
+                <input type="text" id="businessName" name="businessName" required>
+
+                <label for="contactInfo">Contact Information:</label>
+                <input type="text" id="contactInfo" name="contactInfo" required>
+
+                <label for="description">Business Description:</label>
+                <textarea id="description" name="description" required></textarea>
+
+                <button type="submit">Update Profile</button>
+            </form>
+        </section>
+
+        <section id="services">
+            <h2>Service Catalogue</h2>
+            <button id="addServiceBtn">Add New Service</button>
+            <div id="serviceList"></div>
+        </section>
+
+        <section id="appointments">
+            <h2>Appointment Management</h2>
+            <div id="appointmentList"></div>
+        </section>
+
+        <section id="payments">
+            <h2>Payment Management</h2>
+            <form id="paymentForm">
+                <label for="paymentMethod">Preferred Payment Method:</label>
+                <select id="paymentMethod" name="paymentMethod">
+                    <option value="cash">Cash</option>
+                    <option value="credit">Credit Card</option>
+                    <option value="bank">Bank Transfer</option>
+                </select>
+
+                <label for="paymentTiming">Payment Timing:</label>
+                <select id="paymentTiming" name="paymentTiming">
+                    <option value="before">Before Service</option>
+                    <option value="after">After Service</option>
+                </select>
+
+                <button type="submit">Update Payment Settings</button>
+            </form>
+        </section>
+
+        <section id="reviews">
+            <h2>Ratings and Reviews</h2>
+            <div id="reviewList"></div>
+        </section>
+    </main>
+
+    <!-- Modal for adding/editing services -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add/Edit Service</h2>
+            <form id="serviceForm">
+                <label for="serviceName">Service Name:</label>
+                <input type="text" id="serviceName" name="serviceName" required>
+
+                <label for="serviceDescription">Description:</label>
+                <textarea id="serviceDescription" name="serviceDescription" required></textarea>
+
+                <label for="servicePrice">Price:</label>
+                <input type="number" id="servicePrice" name="servicePrice" required>
+
+                <label for="serviceImage">Image URL:</label>
+                <input type="url" id="serviceImage" name="serviceImage">
+
+                <button type="submit">Save Service</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="provider-dashboard.js"></script>
+</body>
+</html>
+
